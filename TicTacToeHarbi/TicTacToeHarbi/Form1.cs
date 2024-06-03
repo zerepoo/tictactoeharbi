@@ -1,42 +1,18 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
 namespace TicTacToeHarbi
 {
-    public partial class Form1 : Form
+    public abstract class BaseForm : Form
     {
-        private char[,] board = new char[3, 3];
-        private Button[,] buttons;
-        private bool xTurn = true;
+        protected char[,] board = new char[3, 3];
+        protected Button[,] buttons;
+        protected bool xTurn = true;
 
-        public Form1()
-        {
-            InitializeComponent();
-            InitializeBoard();
-        }
-
-        private void InitializeBoard()
-        {
-   
-            board = new char[3, 3];
-            xTurn = true;
-
-            buttons = new Button[3, 3] {
-                { btn_1, btn_2, btn_3 },
-                { btn_4, btn_5, btn_6 },
-                { btn_7, btn_8, btn_9 }
-            };
-
-            foreach (Button btn in buttons)
-            {
-                btn.Text = "";
-                btn.Enabled = true;
-                btn.Click += Button_Click;
-            }
-
-            lblResult.Text = "";
-        }
+        protected abstract void InitializeBoard();
+        protected abstract void CheckWinner();
+        protected abstract void ShowWinner(char winner);
 
         protected void Button_Click(object sender, EventArgs e)
         {
@@ -55,9 +31,42 @@ namespace TicTacToeHarbi
             }
         }
 
-        protected virtual void CheckWinner()
+        private void InitializeComponent()
         {
-            // Check rows and columns for a win
+        }
+    }
+
+    public partial class Form1 : BaseForm
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            InitializeBoard();
+        }
+
+        protected override void InitializeBoard()
+        {
+
+            board = new char[3, 3];
+            xTurn = true;
+
+            buttons = new Button[3, 3] {
+                { btn_1, btn_2, btn_3 },
+                { btn_4, btn_5, btn_6 },
+                { btn_7, btn_8, btn_9 }
+            };
+
+            foreach (Button btn in buttons)
+            {
+                btn.Text = "";
+                btn.Enabled = true;
+                btn.Click += Button_Click;
+            }
+        }
+
+        protected override void CheckWinner()
+        {
+
             for (int i = 0; i < 3; i++)
             {
                 if (board[i, 0] != '\0' && board[i, 0] == board[i, 1] && board[i, 1] == board[i, 2])
@@ -72,7 +81,6 @@ namespace TicTacToeHarbi
                 }
             }
 
-            // Check diagonals for a win
             if (board[0, 0] != '\0' && board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2])
             {
                 ShowWinner(board[0, 0]);
@@ -84,7 +92,6 @@ namespace TicTacToeHarbi
                 return;
             }
 
-            // Check for draw
             bool isDraw = true;
             foreach (char c in board)
             {
@@ -101,7 +108,7 @@ namespace TicTacToeHarbi
             }
         }
 
-        protected void ShowWinner(char winner)
+        protected override void ShowWinner(char winner)
         {
             lblResult.Text = $"{winner} Wins!";
             foreach (Button btn in buttons)
@@ -109,9 +116,16 @@ namespace TicTacToeHarbi
                 btn.Enabled = false;
             }
         }
-    
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            InitializeBoard();
 
-    private void btnRestart_Click(object sender, EventArgs e)
+            Form1 form1 = new Form1();
+            form1.Show();
+
+            this.Hide();
+        }
+        private void button1_Click(object sender, EventArgs e)
         {
             InitializeBoard();
 
