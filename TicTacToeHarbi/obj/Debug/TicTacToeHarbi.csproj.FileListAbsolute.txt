@@ -1,0 +1,15 @@
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\bin\Debug\TicTacToeHarbi.exe.config
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\bin\Debug\TicTacToeHarbi.exe
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\bin\Debug\TicTacToeHarbi.pdb
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.csproj.AssemblyReference.cache
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.csproj.SuggestedBindingRedirects.cache
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.Properties.Resources.resources
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.csproj.GenerateResource.cache
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.csproj.CoreCompileInputs.cache
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.exe
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.pdb
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.LoginInterface.resources
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.AdminPanel.resources
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.CreateUserForm.resources
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.UpdatePasswordForm.resources
+C:\Users\GIGABYTE\source\repos\TicTacToeHarbi\TicTacToeHarbi\obj\Debug\TicTacToeHarbi.BaseForm.resources
