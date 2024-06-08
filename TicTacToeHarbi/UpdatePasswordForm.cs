@@ -15,6 +15,7 @@ namespace TicTacToeHarbi
         public UpdatePasswordForm(List<User> users)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.users = users;
         }
 

@@ -14,6 +14,7 @@ namespace TicTacToeHarbi
         public AdminPanel()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -28,12 +29,13 @@ namespace TicTacToeHarbi
 
         private void admin_create_btn_Click(object sender, EventArgs e)
         {
-            
+
             CreateUserForm createUserForm = new CreateUserForm();
             if (createUserForm.ShowDialog() == DialogResult.OK)
             {
-                users.Add(new User { Username = createUserForm.Username, Password = createUserForm.Password });
-                MessageBox.Show("User created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var newUser = new User { Username = createUserForm.Username, Password = createUserForm.Password };
+                users.Add(newUser);
+                MessageBox.Show($"User '{newUser.Username}' created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

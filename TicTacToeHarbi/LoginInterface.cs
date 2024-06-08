@@ -15,6 +15,7 @@ namespace TicTacToeHarbi
         public LoginInterface()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             textBox2.PasswordChar = '*';
         }
 
@@ -31,22 +32,17 @@ namespace TicTacToeHarbi
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-
             string username = textBox1.Text;
             string password = textBox2.Text;
 
-
             if (username == "admin" && password == "adminpass123")
             {
-                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                MessageBox.Show($"Login successful! Welcome, {username}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Hide();
 
-
                 AdminPanel adminPanel = new AdminPanel();
                 adminPanel.ShowDialog();
-
 
                 this.Hide();
             }
@@ -55,7 +51,7 @@ namespace TicTacToeHarbi
                 var user = AdminPanel.users.FirstOrDefault(u => u.Username == username && u.Password == password);
                 if (user != null)
                 {
-                    MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Login successful! Welcome, {username}!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     this.Hide();
 
@@ -63,8 +59,6 @@ namespace TicTacToeHarbi
                     form1.Show();
 
                     this.Hide();
-
-
                 }
                 else
                 {

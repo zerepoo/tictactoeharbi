@@ -38,7 +38,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 137);
+            this.label2.Location = new System.Drawing.Point(61, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 7;
@@ -47,7 +47,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 101);
+            this.label1.Location = new System.Drawing.Point(84, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 8;
@@ -55,14 +55,14 @@
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(158, 98);
+            this.usernameTextBox.Location = new System.Drawing.Point(148, 99);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(100, 20);
             this.usernameTextBox.TabIndex = 6;
             // 
             // updatePasswordBtn
             // 
-            this.updatePasswordBtn.Location = new System.Drawing.Point(158, 171);
+            this.updatePasswordBtn.Location = new System.Drawing.Point(148, 172);
             this.updatePasswordBtn.Name = "updatePasswordBtn";
             this.updatePasswordBtn.Size = new System.Drawing.Size(75, 23);
             this.updatePasswordBtn.TabIndex = 5;
@@ -72,7 +72,7 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(158, 134);
+            this.passwordTextBox.Location = new System.Drawing.Point(148, 135);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
             this.passwordTextBox.TabIndex = 4;

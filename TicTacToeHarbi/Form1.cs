@@ -42,6 +42,7 @@ namespace TicTacToeHarbi
         {
             InitializeComponent();
             InitializeBoard();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         protected override void InitializeBoard()

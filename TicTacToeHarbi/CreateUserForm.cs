@@ -11,6 +11,7 @@ namespace TicTacToeHarbi
         public CreateUserForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void createUserBtn_Click(object sender, EventArgs e)
